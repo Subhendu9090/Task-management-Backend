@@ -18,6 +18,10 @@ const Project = sequelize.define(
     },
     description: {
       type: DataTypes.STRING,
+      validate:{
+        len:[50,500],
+        notEmpty:true
+      }
     },
     banner: {
       type: DataTypes.STRING,

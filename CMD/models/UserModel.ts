@@ -13,8 +13,7 @@ const User = sequelize.define(
       type: DataTypes.STRING,
       validate:{
         len:[2,100],
-        notEmpty:true,
-        notNull:true,
+        notEmpty:true
       }
     },
     email: {
@@ -30,7 +29,7 @@ const User = sequelize.define(
     password: {
       type: DataTypes.STRING,
       validate:{
-        len:[2,200]
+        len:[2,100]
       }
     },
     role: {
@@ -39,7 +38,11 @@ const User = sequelize.define(
     },
     profilePic: {
       type: DataTypes.STRING,
+      defaultValue:""
     },
+    refreshToken:{
+      type:DataTypes.STRING
+    }
   },
   {
     timestamps: true,
