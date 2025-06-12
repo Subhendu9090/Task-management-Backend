@@ -11,7 +11,7 @@ dotenv.config({
 app.use(express.json());
 app.use(cookieParser())
 //routes
-import userRouter from "./CMD/routers/UserRoutes.js";
+import userRouter from "./routers/UserRoutes.js";
 app.use("/api/v1/user", userRouter);
 
 app.listen(port, () => {
